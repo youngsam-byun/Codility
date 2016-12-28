@@ -3,14 +3,19 @@ import java.util.Map;
 
 public class Lesson44 {
 
-    public int[] solution(int N, int[] A) {
+    public static void main(String[] args) {
+
+        solution(1,new int[]{2, 1, 1, 2, 1});
+    }
+
+    public static int[] solution(int N, int[] A) {
         int[] counter = new int[N];
 
         int max = 0;
         int len = A.length;
 
 
-        Map<Integer,Integer> hmap=new HashMap<>();
+        Map<Integer, Integer> hmap = new HashMap<>();
 
         for (int i = 0; i < len; i++) {
 
@@ -20,17 +25,18 @@ public class Lesson44 {
 
                 counter[X - 1]++;
 
-                if(hmap.get(counter[X-1])==null) {
-                    hmap.put(counter[X-1], 1);
+                if (hmap.get(X - 1) == null) {
+                    hmap.put(X - 1, 1);
 
-                    if(1>max)
-                        max=1;
 
-                }else{
-                    int v=hmap.get(counter[X-1]);
-                    hmap.put(counter[X-1],v+1);
-                    if(v+1>max)
-                        max=v+1;
+                    if (1 > max)
+                        max = 1;
+
+                } else {
+                    int v = hmap.get(X - 1);
+                    hmap.put(X - 1, v + 1);
+                    if (v + 1 > max)
+                        max = v + 1;
                 }
 
             } else if (X == N + 1) {
