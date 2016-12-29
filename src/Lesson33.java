@@ -1,7 +1,7 @@
 /**
  * Created by byun.ys on 2016-12-28.
  */
-public class Lession33 {
+public class Lesson33 {
 
     public int solution(int[] A) {
 
