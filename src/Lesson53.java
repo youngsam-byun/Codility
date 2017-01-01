@@ -22,7 +22,7 @@ public class Lesson53 {
             return 0;
 
         double avr=(A[0]+A[1])/2.0;
-        int idx=-1;
+        int idx=0;
 
         for (int i=2;i<N;i++){
             double tmp1= (A[i]+A[i-1])/2.0;
@@ -37,7 +37,6 @@ public class Lesson53 {
                 avr=tmp2;
                 idx=i-2;
             }
-
         }
 
         return  idx;
