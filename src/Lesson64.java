@@ -5,24 +5,19 @@ import java.util.Arrays;
  */
 public class Lesson64 {
 
-
-
     public int solution(int[] A) {
-       if(A==null)
-           return -1;
-
-       int N=A.length;
-       if(N==1)
+       if(A==null||A.length==0||A.length==1)
            return 0;
 
+       int N=A.length;
        final  int EXCEEED=10000000;
 
-       int[] left=new int[N];
-       int[] right=new int[N];
+       long[] left= new long[N];
+       long[] right= new long[N];
 
        for(int i=0;i<N;i++){
-           left[i]=i-A[i];
-           right[i]=i+A[i];
+           left[i]=(long) i-A[i];
+           right[i]=(long) i+A[i];
        }
 
        Arrays.sort(left);
@@ -32,7 +27,7 @@ public class Lesson64 {
        int counter=0;
         for(int i=0;i<N;i++){
             while(j<N&&left[j]<=right[i]){
-                counter+=counter+j-i;
+                counter+=j-i;
                 j++;
             }
             if(counter>EXCEEED)
