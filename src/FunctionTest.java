@@ -11,7 +11,12 @@ public class FunctionTest {
     @Test
     public void testHashMap(){
 
-        Map<Integer,Integer> hmap=new HashMap<>();
+        int a=1;
+        int b=2;
+
+        double c=(a+b)/2.0;
+
+        System.out.println(c);
 
 
 
